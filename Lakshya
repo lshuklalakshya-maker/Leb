@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple AI</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 5px;
+    }
+    #reply {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🤖 Simple AI</h1>
+  <p>Kuch bhi likho, AI jawab degi</p>
+
+  <input type="text" id="question" placeholder="Question likho">
+  <button onclick="aiReply()">Ask</button>
+
+  <div id="reply"></div>
+
+  <script>
+    function aiReply() {
+      let q = document.getElementById("question").value.toLowerCase();
+      let reply = "Mujhe samajh nahi aaya 🤔";
+
+      if (q.includes("hello")) reply = "Hello! Kaise ho 😊";
+      else if (q.includes("name")) reply = "Main ek Simple AI hoon 🤖";
+      else if (q.includes("science")) reply = "Science bahut interesting hai 🔬";
+      else if (q.includes("math")) reply = "Math practice se easy ho jata hai ➕";
+      else if (q.includes("bye")) reply = "Bye! Phir milenge 👋";
+
+      document.getElementById("reply").innerText = reply;
+    }
+  </script>
+
+</body>
+</html>
